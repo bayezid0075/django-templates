@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Dashboard Home {% endblock %}</title>
+    <script src="//cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="/style.css" /> -->
+  </head>
+  <body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+      <!-- Top Navigation Bar -->
+        {% include 'components/navbar.html' %}
+
+      <!-- Hero Section -->
+
+      <div class="flex flex-1">
+        <!-- Sidebar -->
+       {% include 'components/sidebar.html' %}
+
+        <!-- Main Content -->
+          {% block content %}
+
+          {% endblock %}
+      </div>
+
+      <!-- Footer -->
+      <footer class="bg-white shadow-sm mt-auto">
+        <div class="px-6 py-4 text-center text-gray-600">
+          <p>&copy; 2024 Dashboard Template. All rights reserved to {{ author }}.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
