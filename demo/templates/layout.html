@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %} Dashboard Home {% endblock %}</title>
-    <script src="//cdn.tailwindcss.com"></script>
+    <!-- <script src="//cdn.tailwindcss.com"></script> -->
     <!-- <link rel="stylesheet" href="/style.css" /> -->
+     {% load static %}
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
   </head>
   <body class="bg-gray-100">
     <div class="min-h-screen flex flex-col">
@@ -31,5 +33,7 @@
         </div>
       </footer>
     </div>
+    {% load static %}
+    <script src="{% static '/js/script.js' %}"></script>
   </body>
 </html>
